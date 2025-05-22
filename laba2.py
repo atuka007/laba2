@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from sympy import isprime
+from sympy import isprime # для проверки на простые числа
 
 def read_matrix_from_file(filename, N): # Чтение матрицы из файла
     with open(filename, 'r') as f:
