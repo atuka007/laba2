@@ -80,13 +80,13 @@ def main():
         print("\nУсловие: det(A) > sum(diag(F))")
         A_inv = np.linalg.inv(A)
         result = A_inv @ A.T - K * np.linalg.inv(F)
-        print("Результат: A⁻¹·Aᵀ - K·F⁻¹")
+        print("Результат: A^-1·A^T - K·F^-1")
     else:
         print("\nУсловие: det(A) <= sum(diag(F))")
         A_inv = np.linalg.inv(A)
         G = np.tril(A)  # Нижняя треугольная матрица
         result = (A_inv + G - np.linalg.inv(F)) * K
-        print("Результат: (A⁻¹ + G - F⁻¹)·K")
+        print("Результат: (A^-1 + G - F^-1)·K")
 
     print("\nРезультат вычислений:")
     print(result)
